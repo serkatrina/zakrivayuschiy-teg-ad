@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
+    <link rel="icon" type="image/svg+xml" href="./svg/favicon.svg">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="apple-touch-icon" href="./images/favicon.png">
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -11,8 +14,270 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header"></header>
-    <main></main>
+    <header class="header">
+      <a class="header__logo" href="/">Закрывающий тег</a>
+      <h1 class="header__title">записи в блоге &lt;/&gt;</h1>
+    </header>
+    
+    <main class="content">
+      <section class="cards">
+        <!-- Карточка 1: Начало пути -->
+        <article class="card">
+          <h2 class="card__title">Первый шаг</h2>
+          <div class="card__image-container">
+            <img class="card__image card__image--enthusiasm" src="./images/content/beginning.jpg" alt="Начало обучения">
+            <div class="card__label">Энтузиазм</div>
+          </div>
+          <div class="card__content">
+            <p class="card__text">
+              Помню тот день, когда открыл первый урок по HTML. Казалось, что теги — это какой-то секретный код, 
+              который откроет двери в мир технологий. Каждая строчка кода была маленьким открытием.
+            </p>
+            <div class="card__buttons">
+              <button class="card__icon-button" aria-label="Лайкнуть">
+                <svg class="like-icon" width="20" height="20">
+                  <use xlink:href="#heart-icon"></use>
+                </svg>
+              </button>
+              <button class="card__like-button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 2: Первые трудности -->
+        <article class="card">
+          <h2 class="card__title">CSS - магия и боль</h2>
+          <div class="card__image-container">
+            <img class="card__image card__image--confusion" src="./images/content/css-struggle.jpg" alt="Борьба с CSS">
+            <div class="card__label">Растерянность</div>
+          </div>
+          <div class="card__content">
+            <p class="card__text">
+              Flexbox казался магией, пока не столкнулся с реальными проектами. Центрирование по вертикали 
+              превратилось в квест. Но когда всё заработало — это было чувство настоящего триумфа!
+            </p>
+            <div class="card__buttons">
+              <button class="card__icon-button" aria-label="Лайкнуть">
+                <svg class="like-icon" width="20" height="20">
+                  <use xlink:href="#heart-icon"></use>
+                </svg>
+              </button>
+              <button class="card__like-button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 3: JavaScript открытия -->
+        <article class="card">
+          <h2 class="card__title">Мир становится интерактивным</h2>
+          <div class="card__image-container">
+            <img class="card__image card__image--insight" src="./images/content/javascript.jpg" alt="Изучение JavaScript">
+            <div class="card__label">Озарение</div>
+          </div>
+          <div class="card__content">
+            <p class="card__text">
+              Первый alert(), который сработал по моей команде... Это было волшебно! Понимание того, 
+              что теперь сайты могут "думать" и реагировать, полностью изменило моё восприятие веба.
+            </p>
+            <div class="card__buttons">
+              <button class="card__icon-button" aria-label="Лайкнуть">
+                <svg class="like-icon" width="20" height="20">
+                  <use xlink:href="#heart-icon"></use>
+                </svg>
+              </button>
+              <button class="card__like-button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 4: Первый проект -->
+        <article class="card">
+          <h2 class="card__title">Собственный мир</h2>
+          <div class="card__image-container">
+            <img class="card__image card__image--pride" src="./images/content/first-project.jpg" alt="Первый проект">
+            <div class="card__label">Гордость</div>
+          </div>
+          <div class="card__content">
+            <p class="card__text">
+              Создал свою первую страницу с нуля. Каждый элемент был выстрадан, каждая строчка кода — 
+              результат проб и ошибок. Когда увидел результат в браузере — понял, что это только начало.
+            </p>
+            <div class="card__buttons">
+              <button class="card__icon-button" aria-label="Лайкнуть">
+                <svg class="like-icon" width="20" height="20">
+                  <use xlink:href="#heart-icon"></use>
+                </svg>
+              </button>
+              <button class="card__like-button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 5: Git и контроль версий -->
+        <article class="card">
+          <h2 class="card__title">Время взрослеть</h2>
+          <div class="card__image-container">
+            <img class="card__image card__image--discipline" src="./images/content/git.jpg" alt="Работа с Git">
+            <div class="card__label">Дисциплина</div>
+          </div>
+          <div class="card__content">
+            <p class="card__text">
+              Git сначала казался ненужной сложностью. Зачем эти коммиты, ветки, пуши? Пока не "сломал" 
+              проект и не понял ценность контроля версий. Теперь коммичу как профессионал!
+            </p>
+            <div class="card__buttons">
+              <button class="card__icon-button" aria-label="Лайкнуть">
+                <svg class="like-icon" width="20" height="20">
+                  <use xlink:href="#heart-icon"></use>
+                </svg>
+              </button>
+              <button class="card__like-button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 6: Адаптивная вёрстка -->
+        <article class="card">
+          <h2 class="card__title">Мобильный мир</h2>
+          <div class="card__image-container">
+            <img class="card__image card__image--patience" src="./images/content/responsive.jpg" alt="Адаптивный дизайн">
+            <div class="card__label">Терпение</div>
+          </div>
+          <div class="card__content">
+            <p class="card__text">
+              Media queries, относительные единицы, mobile-first... Сначала голова шла кругом. 
+              Но когда увидел, как мой сайт идеально выглядит на всех устройствах — понял, что это того стоило.
+            </p>
+            <div class="card__buttons">
+              <button class="card__icon-button" aria-label="Лайкнуть">
+                <svg class="like-icon" width="20" height="20">
+                  <use xlink:href="#heart-icon"></use>
+                </svg>
+              </button>
+              <button class="card__like-button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 7: Работа в команде -->
+        <article class="card">
+          <h2 class="card__title">Мы - команда</h2>
+          <div class="card__image-container">
+            <img class="card__image card__image--synergy" src="./images/content/teamwork.jpg" alt="Командная работа">
+            <div class="card__label">Синергия</div>
+          </div>
+          <div class="card__content">
+            <p class="card__text">
+              Первый pull request, code review, совместная работа над проектом. Осознал, что программирование — 
+              это не только про код, но и про людей, коммуникацию и взаимопомощь.
+            </p>
+            <div class="card__buttons">
+              <button class="card__icon-button" aria-label="Лайкнуть">
+                <svg class="like-icon" width="20" height="20">
+                  <use xlink:href="#heart-icon"></use>
+                </svg>
+              </button>
+              <button class="card__like-button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 8: Взгляд в будущее -->
+        <article class="card">
+          <h2 class="card__title">Новые горизонты</h2>
+          <div class="card__image-container">
+            <img class="card__image card__image--confidence" src="./images/content/future.jpg" alt="Планы на будущее">
+            <div class="card__label">Уверенность</div>
+          </div>
+          <div class="card__content">
+            <p class="card__text">
+              Оглядываясь назад, вижу огромный пройденный путь. Впереди — React, Node.js, новые технологии. 
+              Но теперь я знаю: нет ничего невозможного, если разбивать большие задачи на маленькие шаги.
+            </p>
+            <div class="card__buttons">
+              <button class="card__icon-button" aria-label="Лайкнуть">
+                <svg class="like-icon" width="20" height="20">
+                  <use xlink:href="#heart-icon"></use>
+                </svg>
+              </button>
+              <button class="card__like-button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <section class="save">
+      <button class="save__button" id="save-button">
+        <svg class="save__icon" width="20" height="20">
+          <use xlink:href="#diskette-icon"></use>
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
+    </section>
+    
+    <!-- Модальное окно -->
+    <dialog class="dialog" id="dialog">
+      <div class="dialog__content">
+        <div class="dialog__column">
+          <svg class="dialog__icon" width="39" height="39">
+            <use xlink:href="#diskette-icon"></use>
+          </svg>
+        </div>
+        <div class="dialog__column">
+          <h2 class="dialog__title">Сохранить на память</h2>
+          <p class="dialog__text">Ваши мысли и достижения сохранены. Возвращайтесь к ним, когда нужно будет вдохновение!</p>
+          <form method="dialog" class="dialog__form">
+            <button class="dialog__button" type="submit">
+              <span class="button__text">OK</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    
+    <!-- SVG спрайт -->
+    <svg style="display: none;">
+      <symbol id="diskette-icon" viewBox="0 0 24 24">
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+      </symbol>
+      
+      <!-- Очищенная и структурированная иконка сердца -->
+      <symbol class="like-icon" viewBox="0 0 39 36" id="heart-icon">
+        <g class="heart">
+          <path class="core" 
+                d="M12 10C12 10 12.5 7 16 7C20 7 22 10 22 10C22 10 24 7 28 7C32 7 34 10 34 10C34 10 36 13 34 16C32 19 28 22 28 22C28 22 26 24 22 24C18 24 16 22 16 22C16 22 12 19 10 16C8 13 10 10 12 10Z" 
+                fill="var(--core-color)"/>
+          <path class="main-body" 
+                d="M16 3C8 3 3 9 3 15C3 25 14 33 18 35C22 33 33 25 33 15C33 9 28 3 20 3C18 3 17 4 16 4C15 4 14 3 16 3Z" 
+                fill="var(--main-body-color)"/>
+          <path class="contour" 
+                d="M16 3C8 3 3 9 3 15C3 25 14 33 18 35C22 33 33 25 33 15C33 9 28 3 20 3C18 3 17 4 16 4C15 4 14 3 16 3Z" 
+                fill="var(--contour-color)"/>
+        </g>
+        <path class="sparks" 
+              d="M10 5C10 5 11 3 13 3C15 3 16 5 16 5C16 5 17 3 19 3C21 3 22 5 22 5C22 5 23 7 22 8C21 9 19 10 19 10C19 10 18 11 16 11C14 11 13 10 13 10C13 10 11 9 10 8C9 7 10 5 10 5Z" 
+              fill="var(--sparks-color)"/>
+      </symbol>
+    </svg>
+    
+    <script src="./scripts/dialog.js"></script>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

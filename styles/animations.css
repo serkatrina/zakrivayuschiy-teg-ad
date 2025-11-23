@@ -9,3 +9,166 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+/* Анимации для иконки сердца */
+
+/* Базовые стили для элементов сердца */
+.like-icon {
+  inline-size: 100%;
+  block-size: 100%;
+  transform-origin: center;
+}
+
+.heart {
+  transform-origin: center;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.core {
+  fill: var(--core-color);
+  transition: fill 0.3s 0.03s linear;
+}
+
+.main-body {
+  fill: var(--main-body-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.contour {
+  fill: var(--contour-color);
+  transition: fill 0.1s linear;
+}
+
+/* ===== СОСТОЯНИЕ HOVER ===== */
+
+/* При наведении: сердцевина закрашивается сразу */
+.card__icon-button:hover .core {
+  fill: var(--hover-fill-color);
+  transition: fill 0.3s linear;
+}
+
+/* При наведении: основное тело закрашивается с задержкой */
+.card__icon-button:hover .main-body {
+  fill: var(--hover-fill-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+/* При уходе курсора: сердцевина становится прозрачной с задержкой */
+.card__icon-button:not(:hover) .core {
+  transition: fill 0.3s 0.03s linear;
+}
+
+/* При уходе курсора: основное тело становится прозрачным сразу */
+.card__icon-button:not(:hover) .main-body {
+  transition: fill 0.3s linear;
+}
+
+/* ===== СОСТОЯНИЕ ACTIVE ===== */
+
+/* При нажатии: сердцевина закрашивается красным сразу */
+.card__icon-button:active .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear;
+}
+
+/* При нажатии: основное тело закрашивается красным с задержкой */
+.card__icon-button:active .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+/* ===== СОСТОЯНИЕ IS-LIKED (клик) ===== */
+
+/* Сердцевина закрашивается красным */
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear;
+}
+
+/* Основное тело закрашивается красным с задержкой */
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s 0.03s linear;
+}
+
+/* Контур закрашивается красным с большей задержкой */
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s 0.06s linear;
+}
+
+/* Масштабирование сердца */
+.like-icon.is-liked .heart {
+  animation: scale-heart 0.3s 0.1s ease-in;
+}
+
+/* Появление искр */
+.like-icon.is-liked .sparks {
+  animation: show-sparks 0.3s 0.3s ease-in;
+}
+
+/* ===== КЕЙФРЕЙМЫ ===== */
+
+/* Анимация масштабирования сердца */
+@keyframes scale-heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Анимация появления искр */
+@keyframes show-sparks {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ===== ВОЗВРАТ К ИСХОДНОМУ СОСТОЯНИЮ ===== */
+
+/* Когда убираем лайк, контур быстро возвращается к исходному цвету */
+.like-icon:not(.is-liked) .contour {
+  transition: fill 0.1s linear;
+}
+
+/* ===== ОТКЛЮЧЕНИЕ АНИМАЦИЙ ДЛЯ REDUCED-MOTION ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  .core,
+  .main-body,
+  .contour {
+    transition: none;
+  }
+  
+  .like-icon.is-liked .heart,
+  .like-icon.is-liked .sparks {
+    animation: none;
+  }
+  
+  .card__icon-button:hover .core,
+  .card__icon-button:hover .main-body,
+  .card__icon-button:active .core,
+  .card__icon-button:active .main-body,
+  .like-icon.is-liked .core,
+  .like-icon.is-liked .main-body,
+  .like-icon.is-liked .contour {
+    transition: none;
+  }
+  
+  .like-icon.is-liked .sparks {
+    opacity: 1;
+  }
+}

@@ -9,6 +9,7 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -215,6 +216,11 @@
 
 .dialog[open] {
   display: flex;
+  animation: slide-in 0.3s ease-out;
+}
+
+.dialog[open]::backdrop {
+  animation: fade-in 0.3s ease-out;
 }
 
 .dialog__content {
@@ -340,14 +346,6 @@
   to {
     opacity: 1;
   }
-}
-
-.dialog[open] {
-  animation: slide-in 0.3s ease-out;
-}
-
-.dialog[open]::backdrop {
-  animation: fade-in 0.3s ease-out;
 }
 
 /* Фильтры для изображений карточек */
@@ -624,5 +622,12 @@ button {
   .card:hover .card__image--confidence {
     transition: none;
   }
+  
+  .dialog[open] {
+    animation: none;
+  }
+  
+  .dialog[open]::backdrop {
+    animation: none;
+  }
 }
-

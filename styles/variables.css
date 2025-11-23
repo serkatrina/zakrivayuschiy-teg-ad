@@ -1,4 +1,3 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   /* Шрифты */
   --main-font: 'Inter-Variable', sans-serif;
@@ -6,24 +5,24 @@
   --main-weight: 400;
   --title-weight: 700;
   
-  /* Цвета */
-  --bg-color: #fff;
-  --accent-color: #000;
-  --stroke-color: #fff;
-  --label-stroke: #000;
+  /* Цвета - инвертированные */
+  --bg-color: #000;
+  --accent-color: #fff;
+  --stroke-color: #000;
+  --label-stroke: #fff;
   
   /* Сложный градиент для фона */
   --page-gradient: 
-    repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
-    repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
-    linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
+    repeating-linear-gradient(90deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    repeating-linear-gradient(180deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    linear-gradient(180deg, #1a1a1a 0.01%, #e7e7e7 100%);
   
   /* Размеры */
   --content-width: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
   --header-padding: clamp(7.5rem, 7.148rem + 1.502vw, 8.5rem);
   
   /* Анимации сердца */
-  --contour-color: #000;
+  --contour-color: #fff;
   --sparks-color: #ff0000;
   --core-color: transparent;
   --main-body-color: transparent;
@@ -43,17 +42,17 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #000;
-    --accent-color: #00cc14;
-    --stroke-color: #000;
-    --label-stroke: #00cc14;
+    --bg-color: #fff;
+    --accent-color: #000;
+    --stroke-color: #fff;
+    --label-stroke: #000;
     
     --page-gradient: 
-      repeating-linear-gradient(90deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
-      repeating-linear-gradient(180deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
-      linear-gradient(180deg, #007f0c 0%, #004306 100%);
+      repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+      repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+      linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
     
-    --contour-color: #00cc14;
+    --contour-color: #000;
     --sparks-color: #ff0000;
     --animation-fill-color: #ff0000;
     --hover-fill-color: var(--contour-color);

@@ -630,4 +630,16 @@ button {
   .dialog[open]::backdrop {
     animation: none;
   }
+  
+  .card__like-button::before,
+  .save__button::before,
+  .dialog__button::before {
+    transition: none;
+  }
+  
+  .card__like-button:hover::before,
+  .save__button:hover::before,
+  .dialog__button:hover::before {
+    transform: scaleX(1);
+  }
 }

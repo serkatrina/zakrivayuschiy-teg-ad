@@ -9,8 +9,6 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -627,3 +625,4 @@ button {
     transition: none;
   }
 }
+
